@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="theme-color" content="#14170f" />
+    <title>Ashen Vale</title>
+    <link rel="icon" href="./favicon.svg" />
+    <script type="module" crossorigin src="./assets/index-BUlsIDZJ.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-DQTBoHrw.css">
+  </head>
+  <body>
+    <canvas id="view"></canvas>
+
+    <div id="loading">
+      <p class="kicker">Field manual 01</p>
+      <h1>Ashen Vale</h1>
+      <p id="load-label">Surveying Emberfield…</p>
+      <div class="bar"><div id="load-fill"></div></div>
+    </div>
+
+    <div id="menu" hidden>
+      <section class="panel">
+        <p class="kicker">Emberfield valley</p>
+        <h1>Ashen Vale</h1>
+        <p class="lede">Cinder Company is on the south bank. Cross the river, hold the ruined village, and break Slate before they take your base.</p>
+        <div id="tank-list"></div>
+        <div class="row">
+          <div class="quality" id="quality" role="group" aria-label="Graphics quality"></div>
+          <label class="volume">Sound <input id="volume" type="range" min="0" max="1" step="0.01" value="0.75" /></label>
+        </div>
+        <div class="help desktop-help">
+          <b>Drive</b> W A S D <b>Aim</b> mouse <b>Fire</b> click or space <b>Zoom</b> right click, C, or shift <b>Map</b> M
+        </div>
+        <div class="help touch-help">
+          Left thumb drives. Drag the right side to aim. Fire and zoom sit under your thumb.
+        </div>
+        <div class="battle-bar">
+          <button id="battle" type="button">Deploy</button>
+        </div>
+      </section>
+    </div>
+
+    <div id="hud" hidden>
+      <div id="feed"></div>
+      <div id="topbar">
+        <div id="score"><span id="ally-count">7</span><i>Cinder</i><b id="clock">7:00</b><i>Slate</i><span id="enemy-count">7</span></div>
+        <div id="cap" hidden><span id="cap-label"></span><div class="bar"><div id="cap-fill"></div></div></div>
+        <div id="spotted" hidden>Spotted</div>
+      </div>
+      <div id="allies" class="roster"></div>
+      <div id="enemies" class="roster"></div>
+      <div id="banner" hidden></div>
+      <div id="reticle">
+        <div id="aim-circle"></div>
+        <div id="cross"></div>
+        <div id="gun-mark"></div>
+        <div id="hit-mark"></div>
+        <div id="hurt-ring"></div>
+      </div>
+      <div id="floaters"></div>
+      <div id="scope"></div>
+      <button id="minimap-wrap" class="interactive" type="button" aria-label="Toggle map">
+        <canvas id="minimap" width="256" height="256"></canvas>
+      </button>
+      <div id="status">
+        <div id="identity"><b id="tank-name">Vanguard</b><span id="tank-role">Medium</span><span id="speed">0</span></div>
+        <div id="hp"><div id="hp-fill"></div><span id="hp-num">1480</span></div>
+        <div id="reload"><div id="reload-fill"></div></div>
+      </div>
+      <div id="fps"></div>
+    </div>
+
+    <div id="input-layer" hidden>
+      <div id="stick" hidden><div id="knob"></div></div>
+      <button id="btn-pause" class="touch-only" data-control="pause" type="button" aria-label="Pause">II</button>
+      <button id="btn-zoom" class="touch-only" data-control="zoom" type="button">Zoom</button>
+      <button id="btn-fire" class="touch-only" data-control="fire" type="button">Fire</button>
+    </div>
+
+    <div id="pause" hidden>
+      <section class="panel narrow">
+        <p class="kicker">Holding</p>
+        <h2>Paused</h2>
+        <button id="resume" type="button">Return to the field</button>
+        <button id="quit" type="button" class="ghost">Leave match</button>
+      </section>
+    </div>
+
+    <div id="end" hidden>
+      <section class="panel narrow">
+        <p class="kicker" id="end-kicker">After action</p>
+        <h2 id="end-title">Victory</h2>
+        <p id="end-sub"></p>
+        <dl id="end-stats"></dl>
+        <button id="again" type="button">Battle again</button>
+        <button id="garage" type="button" class="ghost">Garage</button>
+      </section>
+    </div>
+
+    <div id="fatal" hidden></div>
+  </body>
+</html>
