@@ -8,8 +8,8 @@
     <meta name="theme-color" content="#14170f" />
     <title>Ashen Vale</title>
     <link rel="icon" href="./favicon.svg" />
-    <script type="module" crossorigin src="./assets/index--6bOudHO.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-BIuZTlz3.css">
+    <script type="module" crossorigin src="./assets/index-BhHFews4.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-BcvX1mWA.css">
   </head>
   <body>
     <canvas id="view"></canvas>
@@ -35,7 +35,7 @@
           <b>Drive</b> W A S D <b>Aim</b> mouse <b>Fire</b> click or space <b>Zoom</b> right click, C, or shift <b>Map</b> M
         </div>
         <div class="help touch-help">
-          Left thumb drives. Drag the right side to aim. Fire and zoom sit under your thumb.
+          Left thumb drives. Fire sits above the stick. Drag the right side to aim. Zoom is on the right.
         </div>
         <div class="battle-bar">
           <button id="battle" type="button">Deploy</button>
@@ -81,6 +81,13 @@
       <button id="btn-pause" class="touch-only" data-control="pause" type="button" aria-label="Pause">II</button>
       <button id="btn-zoom" class="touch-only" data-control="zoom" type="button">Zoom</button>
       <button id="btn-fire" class="touch-only" data-control="fire" type="button">Fire</button>
+      <button id="btn-fire-left" class="touch-only" data-control="fire" type="button" aria-label="Fire">
+        <svg class="reload-ring" viewBox="0 0 100 100" aria-hidden="true">
+          <circle cx="50" cy="50" r="46" />
+          <circle id="fire-left-ring" cx="50" cy="50" r="46" />
+        </svg>
+        <span>Fire</span>
+      </button>
     </div>
 
     <div id="pause" hidden>
